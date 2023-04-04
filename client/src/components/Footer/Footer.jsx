@@ -1,7 +1,56 @@
 import React from "react";
+import "./footer.scss";
 
 const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <div className="footer">
+      <div className="top">
+        <div className="item">
+          <h1>Categories</h1>
+          <span>Cars</span>
+          <span>Trucks</span>
+          <span>New Arrivals</span>
+        </div>
+        <div className="item">
+          <h1>Links</h1>
+          <span>FAQ</span>
+          <span>Pages</span>
+          <span>Stores</span>
+          <span>Compare</span>
+          <span>Cookies</span>
+        </div>
+        <div className="item">
+          <h1>About Us</h1>
+          <span>
+            Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit
+            amet conse ctetur adipisicing elit, seddo eiusmod tempor incididunt
+            ut labore etdolore.
+          </span>
+        </div>
+        <div className="item">
+          <h1>Contact</h1>
+          <span>
+            Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit
+            amet conse ctetur adipisicing elit, seddo eiusmod tempor incididunt
+            ut labore etdolore.
+          </span>
+        </div>
+      </div>
+      <div className="bottom">
+        <div className="left">
+          <span className="logo">Car E-Comm</span>
+          <span className="copyright">
+            © Copyright 2023. All rights reserved
+          </span>
+        </div>
+        <div className="right">
+          <img src="/img/payment.png" alt="" />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Footer;
