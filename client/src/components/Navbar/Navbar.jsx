@@ -15,6 +15,25 @@ const Navbar = () => {
             <KeyboardArrowDownIcon />
           </div>
         </div>
+        <div className="center">
+          <Link to="/">Car E-Comm</Link>
+        </div>
+        <div className="right">
+          <div className="center">
+            <Link to="/">Home</Link>
+          </div>
+          <div className="center">
+            <Link to="/">About</Link>
+          </div>
+          <div className="center">
+            <Link to="/">Contact</Link>
+          </div>
+          <div className="icons">
+            <SearchIcon />
+            <PersonOutlineOutlinedIcon />
+            <FavoriteBorderOutlinedIcon />
+          </div>
+        </div>
       </div>
     </div>
   );
