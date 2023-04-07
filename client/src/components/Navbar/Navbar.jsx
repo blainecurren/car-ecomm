@@ -5,7 +5,7 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Link } from "react-router-dom";
-import scss from "./navbar.scss";
+import "./navbar.scss";
 
 const Navbar = () => {
   return (
@@ -16,24 +16,55 @@ const Navbar = () => {
             <img src="/img/en.png" alt="" />
             <KeyboardArrowDownIcon />
           </div>
+          <div className="item">
+            <span>USD</span>
+            <KeyboardArrowDownIcon />
+          </div>
+          <div className="item">
+            <Link className="link" to="/products/1">
+              Cars
+            </Link>
+          </div>
+          <div className="item">
+            <Link className="link" to="/products/2">
+              Trucks
+            </Link>
+          </div>
+          <div className="item">
+            <Link className="link" to="/products/3">
+              Other
+            </Link>
+          </div>
         </div>
         <div className="center">
-          <Link to="/">Car E-Comm</Link>
+          <Link className="link" to="/">
+            E-Carmony
+          </Link>
         </div>
         <div className="right">
-          <div className="center">
-            <Link to="/">Home</Link>
+          <div className="item">
+            <Link className="link" to="/">
+              Home
+            </Link>
           </div>
-          <div className="center">
-            <Link to="/">About</Link>
+          <div className="item">
+            <Link className="link" to="/">
+              About
+            </Link>
           </div>
-          <div className="center">
-            <Link to="/">Contact</Link>
+          <div className="item">
+            <Link className="link" to="/">
+              Contact
+            </Link>
           </div>
           <div className="icons">
             <SearchIcon />
             <PersonOutlineOutlinedIcon />
             <FavoriteBorderOutlinedIcon />
+            <div className="cartIcon">
+              <ShoppingCartOutlinedIcon />
+              <span>0</span>
+            </div>
           </div>
         </div>
       </div>
