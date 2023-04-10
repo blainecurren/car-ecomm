@@ -1,9 +1,10 @@
 .card {
-  width: 200px;
+  width: 280px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-
+  margin-bottom: 50px;
+  
   .image {
     width: 100%;
     height: 400px;
@@ -11,7 +12,7 @@
     position: relative;
 
     &:hover {
-      secondImg {
+      .secondImg {
         z-index: 2;
       }
     }
@@ -29,7 +30,7 @@
 
     span {
       position: absolute;
-      top: 50px;
+      top: 5px;
       left: 5px;
       background-color: white;
       color: teal;
@@ -54,6 +55,7 @@
       font-weight: 500;
 
       &:first-child {
+        color: gray;
         text-decoration: line-through;
       }
     }
