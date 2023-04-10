@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./categories.scss";
 
 const Categories = () => {
   return (
@@ -10,9 +11,11 @@ const Categories = () => {
             src="https://images.pexels.com/photos/818922/pexels-photo-818922.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt=""
           />
-          <Link className="link" to="/products/1">
-            Sale
-          </Link>
+          <button>
+            <Link className="link" to="/products/1">
+              Sale
+            </Link>
+          </button>
         </div>
         <div className="row">r2</div>
       </div>
