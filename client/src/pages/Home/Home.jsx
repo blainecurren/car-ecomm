@@ -3,6 +3,7 @@ import Slider from "../../components/Slider/Slider";
 import FeaturedProducts from "../../components/FeaturedProducts/FeaturedProducts";
 import Categories from "../../components/Categories/Categories";
 import Contact from "../../components/Contact/Contact";
+
 import "./home.scss";
 
 const Home = () => {
