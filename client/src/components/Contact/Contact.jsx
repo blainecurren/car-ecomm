@@ -12,7 +12,7 @@ const Contact = () => {
       <div className="wrapper">
         <span>GET IN TOUCH WITH US:</span>
         <div className="mail">
-          <input type="text" placeholder="Enter your e-mail address" />
+          <input type="text" placeholder="Enter your e-mail" />
           <button>JOIN US</button>
         </div>
         <div className="icons">
