@@ -30,7 +30,13 @@ const Product = () => {
           />
         </div>
         <div className="mainImg">
-          <img src={images[selectedImg]} alt="" />
+          <img
+            src={
+              process.env.REACT_APP_UPLOAD_URL +
+              data?.attributes[selectedImg]?.data?.attributes?.url
+            }
+            alt=""
+          />
         </div>
       </div>
       <div className="right">
