@@ -10,20 +10,21 @@
 
     .filterItem {
       margin-bottom: 30px;
-    }
 
-    h2 {
-      font-weight: 400;
-      margin-bottom: 20px;
-    }
+      h2 {
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
 
-    .inputItem {
-      margin-bottom: 10px;
-      label {
-        margin-left: 10px;
+      .inputItem {
+        margin-bottom: 10px;
+        label {
+          margin-left: 10px;
+        }
       }
     }
   }
+
   .right {
     flex: 3;
 
