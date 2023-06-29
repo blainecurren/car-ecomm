@@ -16,38 +16,50 @@ const Product = () => {
 
   return (
     <div className="product">
-      {loading ? (
-        "loading"
-      ) : (
-        <>
-          <div className="left">
-            <div className="images">
-              <img
-                src={
-                  process.env.REACT_APP_UPLOAD_URL +
-                  data?.attributes?.img?.data?.attributes.url
-                }
-                alt=""
-                onClick={(e) => setSelectedImg("img")}
-              />
-              <img
-                src={
-                  process.env.REACT_APP_UPLOAD_URL +
-                  data?.attributes?.img2?.data?.attributes.url
-                }
-                alt=""
-                onClick={(e) => setSelectedImg("img2")}
-              />
-            </div>
-            <div className="mainImg">
-              <img
-                src={
-                  process.env.REACT_APP_UPLOAD_URL +
-                  data?.attributes[selectedImg].data?.attributes?.url
-                }
-                alt=""
-              />
-            </div>
+      <div className="left">
+        <div className="images">
+          <img
+            src={data?.attributes?.img?.data?.attributes.url}
+            alt=""
+            onClick={(e) => setSelectedImg(0)}
+          />
+          <img
+            src={data?.attributes?.img2?.data?.attributes.url}
+            alt=""
+            onClick={(e) => setSelectedImg(1)}
+          />
+        </div>
+        <div className="mainImg">
+          <img
+            src={
+              process.env.REACT_APP_UPLOAD_URL +
+              data?.attributes[selectedImg]?.data?.attributes?.url
+            }
+            alt=""
+          />
+        </div>
+      </div>
+      <div className="right">
+        <h2>{data?.attributes?.title}</h2>
+        <span className="price">{data?.attributes?.price}</span>
+        <p>
+         {data?.attributes?.desc}
+        </p>
+        <div className="quantity">
+          <button
+            onClick={() => setQuantity((prev) => (prev === 1 ? 1 : prev - 1))}
+          >
+            -
+          </button>
+          {quantity}
+          <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
+        </div>
+        <button className="add">
+          <AddShoppingCartIcon /> ADD TO CART
+        </button>
+        <div className="links">
+          <div className="item">
+            <FavoriteBorderIcon /> ADD TO WISH LIST
           </div>
           <div className="right">
             <h2>Title</h2>
