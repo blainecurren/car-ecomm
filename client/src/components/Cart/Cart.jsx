@@ -1,29 +1,10 @@
 import React from "react";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import "./cart.scss";
+import { useSelector } from "react-redux";
 
 const Cart = () => {
-  const data = [
-    {
-      id: 1,
-      img: "https://images.pexels.com/photos/1972115/pexels-photos-1972115.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      img2: "https://images.pexels.com/photos/1163194/pexels-photos-1163194.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      title: "Long Sleeve Graphic T-shirt",
-      desc: "Long Sleeve Graphic T-shirt",
-      isNew: true,
-      oldPrice: 19,
-      price: 12,
-    },
-    {
-      id: 2,
-      img: "https://images.pexels.com/photos/1759622/pexels-photos-1759622.jpeg?auto=compress&cs=tinysrgb&w=1600",
-      title: "Coat",
-      desc: "Coat",
-      isNew: true,
-      oldPrice: 19,
-      price: 12,
-    },
-  ];
+  const products = useSelector((state) => state.cart.products);
 
   return (
     <div className="cart">
