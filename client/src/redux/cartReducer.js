@@ -1,24 +1,32 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  value: 0,
+  products: [],
 };
 
-export const counterSlice = createSlice({
-  name: "counter",
+export const cartSlice = createSlice({
+  name: "cart",
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1;
+    addToCart: (state, action) => {
+      const item = state.products.find((item) => item.id === action.payload.id);
+
+      if (item) {
+        item.quantity += action.payload.quantity;
+      } else {
+        state.push(action.payload);
+      }
     },
-    decrement: (state) => {
-      state.value -= 1;
+    removeItem: (state, action) => {
+      state.products = state.products.filter(
+        (item) => item.id !== action.payload.id
+      );
     },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
+    resetCart: (state, action) => {
+      state.products = [];
     },
   },
 });
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions;
-export default counterSlice.reducer;
+export const { addToCart, removeItem, resetCart } = cartSlice.actions;
+export default cartSlice.reducer;
