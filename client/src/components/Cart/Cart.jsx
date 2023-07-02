@@ -3,6 +3,7 @@ import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import "./cart.scss";
 import { useSelector } from "react-redux";
 import { removeItem, resetCart } from "../../redux/cartReducer";
+import {useDispatch } from 'react-redux'
 
 const Cart = () => {
   const products = useSelector((state) => state.cart.products);
